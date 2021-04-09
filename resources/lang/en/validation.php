@@ -119,6 +119,16 @@ return [
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
 
+
+
+
+    
+
+    'form_data_error' => 'Form was not filled properly',
+    'sign_up_success' => 'Sign up successful',
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -150,3 +160,5 @@ return [
     'attributes' => [],
 
 ];
+
+

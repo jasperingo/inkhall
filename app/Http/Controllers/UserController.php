@@ -41,7 +41,6 @@ class UserController extends Controller
     public function store(Request $request)
     {
         
-        return $request->all();
 
         $validator = Validator::make($request->all(), [
             'first_name' => 'required',
@@ -53,7 +52,7 @@ class UserController extends Controller
         
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return IH_response(422, __('validation.form_data_error'), $validator->errors());
         }
 
         $user = new User;
@@ -68,10 +67,10 @@ class UserController extends Controller
 
         $user->password = Hash::make($request->password);
 
-        $user->save();
+        //$user->save();
 
         
-        return  response()->json();
+        return IH_response(201, __('validation.sign_up_success'));
     }
 
     /**
