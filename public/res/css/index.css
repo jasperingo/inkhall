@@ -1,0 +1,83 @@
+
+
+
+#index-featured {
+	padding: 1em 0;
+	border-bottom: 1px solid #808080;
+}
+
+
+#index-halls {
+	padding: 2em 0;
+	border-bottom: 1px solid #808080;
+}
+
+#index-halls > div > h2 {
+	margin: auto;
+	font-size: medium;
+	borderr: 1px solid black;
+}
+
+#index-halls > div > ul {
+	margin-top: 2em;
+	borderr: 1px solid black;
+}
+
+#index-halls > div > a {
+	width: 10em;
+	margin: auto;
+	display: block;
+}
+
+
+#index-papers {
+	padding: 2em 0;
+}
+
+#index-papers > div > ul {
+	borderr: 1px solid black;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+	#index-halls > div > ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#index-halls > div > ul > li {
+		flex-basis: 48%;
+	}
+
+
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+	#index-halls > div > ul > li {
+		flex-basis: 32%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

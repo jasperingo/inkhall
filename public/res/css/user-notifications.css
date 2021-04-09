@@ -1,0 +1,25 @@
+
+
+
+#notifications {
+	transition: padding 0.5s;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+	#notifications {
+		width: 70em;
+		padding: 2em;
+		margin: 2em 0;
+		border-radius: 5px;
+		border: 1px solid #808080;
+	}
+
+}
+
+
+
+
+

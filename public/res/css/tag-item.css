@@ -1,0 +1,41 @@
+
+
+
+.tag-item {
+	max-width: 100%;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	border-radius: 5px;
+	display: inline-block;
+	border: 1px solid #808080;
+	background-color: #F3F3F3;
+}
+
+.tag-item > a {
+	padding: 0.5em;
+	color: #000000;
+	max-width: 100%;
+	font-size: small;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.tag-item > a:active {
+	background-color: #808080;
+}
+
+
+.tag-item > button {
+	border: none;
+	color: #000000;
+	max-width: 100%;
+	font-size: small;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: transparent;
+}
+
+
+
+

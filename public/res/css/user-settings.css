@@ -1,0 +1,66 @@
+
+
+
+#tabs {
+	display: none;
+}
+
+#tabs a {
+	width: 100%;
+	display: block;
+	color: #000000;
+	font-weight: bold;
+	font-size: medium;
+	padding: 0.625em 0.3125em;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+#tabs a.active {
+	color: #1183D1;
+}
+
+#details {
+	
+	borderr: 1px solid black;
+}
+
+
+#details form {
+	border-bottom: 1px solid #DCDCDC;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+
+	#tabs {
+		z-index: 1;
+		width: 20em;
+		padding: 2em;
+		display: block;
+		margin-top: 1em;
+		position: fixed;
+		border-radius: 5px;
+		border: 1px solid #DCDCDC;
+		background-color: #FFFFFF;
+	}
+
+	#tabs ul {
+		border-top: 1px solid #DCDCDC;
+	}
+
+
+	#details {
+		width: 52em;
+		margin-left: 22em;
+	}
+
+}
+
+
+
+
+
+
+

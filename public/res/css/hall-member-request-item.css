@@ -1,0 +1,78 @@
+
+
+.request-item {
+	margin-bottom: 2em;
+	background-color: #FFFFFF;
+	borderr: 1px solid blue;
+}
+
+
+.request-item-user {
+	display:block;
+	color: #000000;
+	vertical-align: middle;
+	borderr: 1px solid #Ff0000;
+}
+
+
+.request-item-user > img {
+	width: 3em;
+	height: 3em;
+	max-height: 200px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	borderr: 1px solid #F3F3F3;
+}
+
+.request-item-user > h3 {
+	width: 70%;
+	margin: auto;
+	font-size: medium;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.request-item-body {
+	borderr: 1px solid green;
+}
+
+.request-item-body div {
+	margin-top: 1em;
+}
+
+.request-item-body dd {
+	font-size: medium;
+}
+
+.request-item-body-role {
+	color: #808080;
+	text-transform: uppercase;
+}
+
+
+.request-item > form {
+	margin-top: 1em;
+	margin-right: 2em;
+	display: inline-block;
+	borderr: 1px solid green;
+}
+
+.request-item > form > button {
+	height: 1.875em;
+	font-size: medium;
+	border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

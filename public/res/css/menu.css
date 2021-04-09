@@ -1,0 +1,32 @@
+
+
+
+
+#menu-list {
+	padding: 0.5em;
+	border-radius: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #DCDCDC;
+}
+
+
+
+#menu-list a {
+	color: #000000;
+	display: block;
+	padding: 0.625em;
+	font-size: medium;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+#menu-list li:last-child a {
+	color: #FF0000;
+}
+
+
+
+
+
+
+
+

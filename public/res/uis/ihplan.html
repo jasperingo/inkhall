@@ -1,0 +1,310 @@
+
+
+#OBJECTS
+-USER
+-FORGOT PASSWORD
+-NOTIFICATION
+-FOLLOW
+-PAPER
+-PAPER VIEW
+-REACTION
+-COMMENT
+-TAG
+-TAGGED
+-HALL
+-HALL MEMBER
+-HALL MEMBER REQUEST
+-SEARCH HISTORY
+
+
+#EMAILS
+--welcome
+--sign in
+--password reset link
+--email digest
+--mention
+--new follower
+--paper like
+--paper dislike
+--paper comment
+--hall member
+
+
+#USER
+-first name
+-last name
+-username
+-email
+-password
+-bio
+-photo
+-linked facebook
+-linked google
+-email digest
+-social notifications (
+	new follower/
+	mention/
+	paper like/
+	paper dislike/
+	aper comment/
+	hall member
+)
++sign up
++sign in
++set account
+
+
+#FORGOT PASSWORD
+-user
+-code
+-expire time
+-used
++request
++make use
+
+
+#NOTIFICATION
+-owner
+-type (
+	new follower/
+	mention/
+	paper like/
+	paper dislike/
+	paper comment/
+	hall member/
+	hall admin/
+	hall paper accepted/
+	hall paper rejected/
+	hall paper unpublished,
+	join hall request/
+	join hall request rejected/
+ )
+-viewed
+-user
+-paper
+-hall
++send
++view
+
+
+#FOLLOW 
+-follower
+-user
+-hall
++add
++remove
+
+
+#TAG
+-name
++added
+
+
+#TAGGED
+-paper
+-hall
+-tag
++added
++removed
+
+
+#PAPER
+-title
+-subtitle
+-slug
+-content
+-icon
+-status (draft/published)
+-hall
+-author
+-pending
++write
++edit
++publish
++unpublish
++delete
++remove from hall
+
+
+#PAPER VIEW
+-paper
+-user
+-finished
++add
+
+
+#COMMENT
+-paper
+-comment
+-user
+-content
++create
++delete
+
+
+#REACTION
+-paper
+-comment
+-user
+-like(0, 1)
++add
++remove
+
+
+#HALL
+-name
+-description
+-icon
+-slug
++create
++edit
++delete
+
+
+#HALL MEMBER
+-hall
+-user
+-title
+-role(owner,editor,writer)
+-adder
++add
++remove
+
+
+#BLOCKED USER
+-user
+-blocked user
++add
++remove
+
+
+#REPORTED CONTENT
+-user
+-paper
+-comment
+-reason (spam, harassment, violation)
++report
+
+
+#SEARCH HISTORY
+-q
+-user
+-ip address
++add
+
+
+
+#VIEWS
+-HOME *
+-ABOUT *
+-TERMS *
+-MENU *
+-user/SIGNUP *
+-user/SIGNIN *
+-user/FORGOT-PASSWORD *
+-user/RESET-PASSWORD *
+-user/PROFILE *
+-user/ABOUT *
+-user/SETTINGS *
+-user/NOTIFICATIONS *
+-user/PAPERS/(draft/published) *
+-user/USERS/(followers/following) *
+-user/HALLS/(owner/editor/writer/following/requests?) *
+-HALLS *
+-hall/CREATE *
+-hall/HOME *
+-hall/ABOUT *
+-hall/SETTINGS *
+-hall/MEMBERS/(owner/editors/writers/followers) *
+-hall/MEMBERS/REQUESTS *
+-hall/MEMBERS/ADD *
+-hall/MEMBERS/REMOVE *
+-hall/MEMBERS/SEND-REQUEST *
+-hall/PAPERS/DRAFT *
+-paper/CREATE *
+-paper/HOME *
+-paper/LIKES *
+-paper/DISLIKES *
+-paper/COMMENTS *
+-comment/HOME *
+-tags/PAPERS *
+-tags/HALLS *
+-search/HOME *
+-search/(papers,people,halls,tags) *
+
+
+
+#LIST VIEWS
+-user
+-paper
+-hall
+-tag
+-comment
+-notification
+-hall-member-request
+-search history?
+
+
+#API ENDPOINTS
+--GET--
+-home/PAPERS
+-home/HALLS
+-user/FORGOT-PASSWORD
+-user/RESET-PASSWORD
+-user/FEEDS
+-user/SUGGEST/HALLS
+-user/SUGGEST/USERS
+-user/PROFILE
+-user/BLOCKED-USERS
+-user/PAPERS(draft, published, comments)
+-user/NOTIFICATIONS
+-user/FOLLOWERS
+-user/FOLLOWING
+-user/HALLS
+-hall/HOME
+-hall/ABOUT
+-paper/HOME
+-paper/LIKES
+-paper/DISLIKES
+-paper/COMMENTS
+-comment/COMMENTS
+-tags/PAPERS
+-search/PAPERS
+-search/USERS
+-search/HALLS
+-search/TAGS
+--POST--
+-user/SIGNUP
+-user/SIGNIN
+-user/BLOCK
+-user/FOLLOW
+-notification/SEND
+-hall/FOLLOW
+-hall/CREATE
+-paper/CREATE
+-paper/REACT
+-paper/COMMENT
+-paper/VIEW
+--UPDATE--
+-user/SETTINGS
+-hall/SETTINGS
+-paper/EDIT
+--DELETE--
+paper/DELETE
+hall/DELETE
+react/DELETE
+user/UNBLOCK
+
+
+
+
+++TODO++
+sign in table
+sign in with facebook/google
+paper create/edit
+anonymous views count
+paper previewed by hall editor notify
+
+
+
+

@@ -1,0 +1,69 @@
+
+
+
+.notification-item {
+	display: flex;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #F3F3F3;
+}
+
+.notification-item-unseen {
+	background-color: aqua;
+}
+
+.notification-item > a {
+	color: #000000;
+	display: block;
+	padding: 0.5em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.notification-item > a > img {
+	width: 4em;
+	height: 4em;
+	display: block;
+	border-radius: 50%;
+	border: 1px solid #F3F3F3;
+}
+
+.notification-item-body {
+	width: 73%;
+	flex: 1 1 1%;
+}
+
+.notification-item-body > div,
+.notification-item-body > time {
+	font-size: small;
+}
+
+.notification-item-user,
+.notification-item-p-h {
+	font-weight: bold;
+}
+
+.notification-item-type {
+	color: #808080;
+}
+
+
+.notification-item-body > time {
+	display: block;
+	color: #808080;
+	margin-top: 0.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

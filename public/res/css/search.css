@@ -1,0 +1,80 @@
+
+
+#search-box {
+	display: none;
+}
+
+#main-header #search-link {
+	display: none;
+}
+
+#main-header > div > nav > ul > li:nth-child(3) {
+	display: inline-block;
+}
+
+#main-search-form {
+	margin: 1em auto 0;
+	borderr: 1px solid red;
+}
+
+#main-search-input {
+	width: 100%;
+	height: 2.5em;
+	padding: 0.625em;
+	font-size: medium;
+	border-radius: 5px;
+	padding-right: 2.5em;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #1183D1;
+}
+
+#main-search-form > button {
+	width: 4em;
+	height: 3.8em;
+	margin-left: -4em;
+	vertical-align: middle;
+	background-color: #1183D1;
+	border: 1px solid #1183D1;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#main-search-form > button:focus {
+	border: 2px dashed #FFFFFF;
+}
+
+#main-search-form svg {
+	width: 2em;
+	height: 2em;
+	fill: #FFFFFF;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+	.pagination,
+	#search-results > div > ul {
+		width: 60em;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

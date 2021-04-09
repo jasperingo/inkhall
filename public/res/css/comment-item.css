@@ -1,0 +1,129 @@
+
+
+.comment-box,
+.comment-item {
+	margin-bottom: 2em;
+	background-color: #FFFFFF;
+	borderr: 1px solid blue;
+}
+
+.comment-item-writer {
+	display: flex;
+	margin: 0.5em auto;
+	borderr: 1px solid green;
+}
+
+.comment-item-writer > a {
+	display: inline-block;
+	vertical-align: middle;
+	borderr: 1px solid red;
+}
+
+.comment-item-writer > a > img {
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #F3F3F3;
+}
+
+.comment-item-writer > div {
+	width: 72%;
+	flex: 1 1 1%;
+	font-size: small;
+	align-self: center;
+	padding-left: 0.3em;
+	display: inline-block;
+	vertical-align: middle;
+	borderr: 1px solid red;
+}
+
+.comment-item-writer > div > a {
+	color: #000000;
+	display: block;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.comment-item-writer > div > time {
+	color: #808080;
+	display: block;
+}
+
+
+.comment-item-content {
+	font-size: medium;
+}
+
+
+.comment-item-foot {
+	margin-top: 1em;
+	borderr: 1px solid red;
+}
+
+.comment-item-foot svg {
+	width: 2em;
+	height: 2em;
+	margin: auto;
+	fill: #666666;
+	display: block;
+}
+
+.comment-item-foot > li {
+	width: 29.33%;
+	display: inline-block;
+	vertical-align: middle;
+	borderr: 1px solid blue;
+}
+
+.comment-item-foot-3-items > li {
+	width: 33.33%;
+}
+
+li.delete-comment-item {
+	width: 12%;
+}
+
+.delete-comment-item svg {
+	fill: #FF0000;
+}
+
+.comment-item-foot div,
+.comment-item-foot form {
+	text-align: center;
+}
+
+.comment-item-foot form > button {
+	padding: 0;
+	border: none;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+}
+
+.comment-item-foot div > span,
+.comment-item-foot form > span {
+	font-size: small;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.comment-item-foot div > a {
+	display: inline-block;
+	vertical-align: middle;
+	borderr: 1px solid purple;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+
+	.comment-box {
+		width: 80em;
+	}
+
+}
+
+
+
+

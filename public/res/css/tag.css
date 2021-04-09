@@ -1,0 +1,23 @@
+
+
+
+.page-hjead h1 > span {
+	max-width: 100%;
+	overflow: hidden;
+	padding: 0.3125em;
+	border-radius: 5px;
+	white-space: nowrap;
+	display: inline-block;
+	text-overflow: ellipsis;
+	background-color: #F3F3F3;
+	border: 1px solid #808080;
+}
+
+
+
+
+
+
+
+
+

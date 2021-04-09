@@ -1,0 +1,90 @@
+
+
+body {
+	background-color: #083C5E;
+}
+
+#signin-form {
+	padding: 2em;
+	margin: 2em auto;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	borderr: 1px solid #1183D1;
+}
+
+#signin-form > h1 {
+	color: #1183D1;
+	text-align: center;
+}
+
+#signin-forgot-password {
+	margin-bottom: 1em;
+	borderr: 1px solid #1183D1;
+}
+
+#signin-forgot-password > div {
+	font-size: small;
+	text-align: center;
+	margin-bottom: 0.375em;
+}
+
+#signin-forgot-password a {
+	color: #1183D1;
+}
+
+#signin-social {
+	text-align: center;
+	margin-bottom: 2em;
+	borderr: 1px solid green;
+}
+
+#signin-social-head {
+	color: #666666;
+	font-size: small;
+	margin-bottom: 0.5em;
+	borderr: 1px solid #1183D1;
+}
+
+#signin-social > a {
+	display: inline-block;
+	borderr: 1px solid blue;
+}
+
+#signin-social-fb {
+	margin-right: 1em;
+}
+
+#signin-social-fb > svg {
+	fill: blue;
+}
+
+#signin-social-g {
+	margin-left: 1em;
+}
+
+#signin-social-g > svg {
+	fill: red;
+}
+
+#signin-social svg {
+	width: 3em;
+	height: 3em;
+}
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+	#signin-form {
+		width: 40em;
+	}
+
+}
+
+
+
+
+
+
