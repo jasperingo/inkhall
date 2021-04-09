@@ -41,8 +41,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
         
-        //return $request->all();
-        
+        return $request->all();
+
         $validator = Validator::make($request->all(), [
             'first_name' => 'required',
             'last_name'=> 'required',
@@ -51,7 +51,7 @@ class UserController extends Controller
             'password'=> ['required', 'alpha_num', 'min:6', 'max:10', 'confirmed']
         ]);
         
-        
+
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
