@@ -55,17 +55,9 @@ class UserController extends Controller
             return IH_response(422, __('validation.form_data_error'), $validator->errors());
         }
 
-        $user = new User;
+        $request->password = Hash::make($request->password);
 
-        $user->first_name = $request->first_name;
-
-        $user->last_name = $request->last_name;
-
-        $user->username = $request->username;
-
-        $user->email = $request->email;
-
-        $user->password = Hash::make($request->password);
+        $user = User::create($request->all());
 
         //$user->save();
 
