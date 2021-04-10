@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 
@@ -41,28 +40,34 @@ class UserController extends Controller
     public function store(Request $request)
     {
         
-
+        
         $validator = Validator::make($request->all(), [
             'first_name' => 'required',
             'last_name'=> 'required',
             'username'=> ['required', 'unique:users'],
             'email'=> ['required', 'unique:users', 'email:filter'],
-            'password'=> ['required', 'alpha_num', 'min:6', 'max:10', 'confirmed']
+            'password'=> ['required', 'min:6', 'max:20', 'confirmed',
+                'regex:/^(?=.*?[a-zA-Z])(?=.*?[0-9]).*$/'
+            ]
         ]);
         
 
         if ($validator->fails()) {
             return IH_response(422, __('validation.form_data_error'), $validator->errors());
         }
-
-        $request->password = Hash::make($request->password);
-
-        $user = User::create($request->all());
-
-        //$user->save();
-
         
-        return IH_response(201, __('validation.sign_up_success'));
+        
+        $requestData = $request->all();
+        $requestData['receive_email_digest'] = 1;
+        $requestData['receive_social_notification'] = 1;
+
+        $user = User::create($requestData);
+
+        $token = $user->createToken("API_KEY");
+        
+        return IH_response(201, __('validation.sign_up_success'), [
+            'token' => $token->plainTextToken
+        ]);
     }
 
     /**
