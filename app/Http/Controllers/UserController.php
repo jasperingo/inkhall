@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 use App\Models\User;
 
 
@@ -148,16 +149,43 @@ class UserController extends Controller
     }
 
 
-
-
     public function forgotPassword(Request $request) 
     {
+        $validator = Validator::make($request->all(), [
+            'email'=> ['required', 'email:filter']
+        ]);
+
+        $status = Password::sendResetLink($request->only('email'));
+
+        if ($status === Password::RESET_LINK_SENT) {
+            return  IH_response(200, __($status));
+        }
         
-        return 22;
+        return  IH_response(422, __($status), [$status, Password::RESET_LINK_SENT]);
     }
     
-
     
+    public function resetPassword(Request $request) 
+    {
+        
+
+        $validator = Validator::make($request->all(), [
+            'token'=> 'required',
+            'email'=> ['required', 'email:filter'],
+            'password'=> ['required', 'min:6', 'max:20', 'confirmed',
+                'regex:/^(?=.*?[a-zA-Z])(?=.*?[0-9]).*$/'
+            ]
+        ]);
+        
+        
+        if ($validator->fails()) {
+            return IH_response(422, __('validation.form_data_error'), $validator->errors());
+        }
+        
+
+    }
+
+
 
 
    /*private function onVerifyLoginFailed($field, $request)
