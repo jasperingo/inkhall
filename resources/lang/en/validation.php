@@ -126,6 +126,7 @@ return [
 
     'form_data_error' => 'Form was not filled properly',
     'sign_up_success' => 'Sign up successful',
+    'sign_in_success' => 'Sign in successful',
 
 
 

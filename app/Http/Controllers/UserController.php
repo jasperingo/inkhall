@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 
@@ -70,6 +71,34 @@ class UserController extends Controller
         ]);
     }
 
+
+    /**
+     * Sign in and authenticate a user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function signIn(Request $request)
+    {
+        
+        $with = isset($request['email']) ? "email" : "username";
+
+        $data = $request->only($with, "password");
+
+        if (!Auth::attempt($data)) {
+            return IH_response(422, __('auth.failed'));
+        }
+
+        $user = User::where($with, $request->input($with))->first();
+
+        $token = $user->createToken("API_KEY");
+        
+        return IH_response(201, __('validation.sign_in_success'), [
+            'token' => $token->plainTextToken
+        ]);
+    }
+    
+
     /**
      * Display the specified resource.
      *
@@ -118,33 +147,20 @@ class UserController extends Controller
         
     }
 
-    public function login()
+
+
+
+    public function forgotPassword(Request $request) 
     {
         
-        return view('login.login');
-
-    }
-
-
-    public function verifyLogin(Request $request) 
-    {
-        
-        $field = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-
-        $user = User::where($field, $request->username)->first();
-
-        if ($user === null)
-             return $this->onVerifyLoginFailed('username', $request);
-
-        if (! Hash::check($request->password, $user->password)) 
-            return $this->onVerifyLoginFailed('password', $request);
-
-        auth()->login($user, true);
-
-        return redirect()->route('index', ['locale'=> app()->getLocale()]);
+        return 22;
     }
     
-    private function onVerifyLoginFailed($field, $request)
+
+    
+
+
+   /*private function onVerifyLoginFailed($field, $request)
     {
         return back()->withErrors([
                 $field => __('auth.'.$field)
@@ -158,7 +174,7 @@ class UserController extends Controller
 
         return redirect()->route('index',  ['locale'=> app()->getLocale()]);
 
-    }
+    }*/
 
 
 

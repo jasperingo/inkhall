@@ -25,9 +25,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/user/signup',  [UserController::class, 'store']);
 
+Route::post('/user/signin',  [UserController::class, 'signIn']);
 
 
-
+Route::post('/user/forgot-password',  [UserController::class, 'forgotPassword']);
 
 
 
