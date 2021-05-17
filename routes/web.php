@@ -5,6 +5,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 
 /*
@@ -17,6 +18,15 @@ use App\Models\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('email/welcome', function() {
+
+
+	return new App\Mail\Welcome;
+
+});
+
 
 Route::get('/', function () {
 
